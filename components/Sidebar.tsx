@@ -1,7 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { createSupabaseBrowserClient } from '@/lib/supabase-browser'
 
 const NAV = [
   {
@@ -38,6 +40,23 @@ const NAV = [
 
 export default function Sidebar() {
   const pathname = usePathname()
+  const router   = useRouter()
+  const [email,        setEmail]        = useState<string | null>(null)
+  const [signingOut,   setSigningOut]   = useState(false)
+
+  useEffect(() => {
+    const supabase = createSupabaseBrowserClient()
+    supabase.auth.getSession().then(({ data }) => {
+      setEmail(data.session?.user?.email ?? null)
+    })
+  }, [])
+
+  const handleSignOut = async () => {
+    setSigningOut(true)
+    await fetch('/api/auth/logout', { method: 'POST' })
+    router.replace('/login')
+    router.refresh()
+  }
 
   return (
     <aside className="w-56 shrink-0 bg-white border-r border-gray-200 min-h-screen flex flex-col">
@@ -74,8 +93,33 @@ export default function Sidebar() {
         })}
       </nav>
 
-      {/* Footer hint */}
-      <div className="px-5 py-4 border-t border-gray-100">
+      {/* Footer: user + sign-out */}
+      <div className="px-4 py-4 border-t border-gray-100 space-y-3">
+        {/* Signed-in user */}
+        {email && (
+          <div className="flex items-center gap-2.5 min-w-0">
+            {/* Avatar circle */}
+            <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-xs font-bold shrink-0 uppercase">
+              {email[0]}
+            </div>
+            <span className="text-xs text-gray-500 truncate" title={email}>{email}</span>
+          </div>
+        )}
+
+        {/* Sign out */}
+        <button
+          onClick={handleSignOut}
+          disabled={signingOut}
+          className="w-full flex items-center gap-2 px-3 py-2 text-sm font-medium text-red-600
+                     bg-red-50 hover:bg-red-100 rounded-lg transition disabled:opacity-50"
+        >
+          <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1" />
+          </svg>
+          {signingOut ? 'Signing out…' : 'Sign out'}
+        </button>
+
         <p className="text-[11px] text-gray-400">Humor Study DB · Admin</p>
       </div>
     </aside>

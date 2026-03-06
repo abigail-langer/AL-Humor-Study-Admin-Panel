@@ -1,4 +1,6 @@
-import { NextResponse } from 'next/server'
+import { NextResponse }       from 'next/server'
+import { createServerClient } from '@supabase/ssr'
+import { cookies }            from 'next/headers'
 
 const API_BASE = 'https://api.almostcrackd.ai'
 
@@ -11,24 +13,50 @@ const SUPPORTED_TYPES = [
   'image/heic',
 ]
 
-// POST /api/images/upload
-// Runs the full 3-step pipeline using a service token stored in PIPELINE_API_TOKEN:
-//   1. GET presigned S3 URL
-//   2. PUT file to S3
-//   3. Register image with the pipeline (returns imageId saved to DB)
-//
-// Expects multipart/form-data with a single field: "file"
+/**
+ * POST /api/images/upload
+ *
+ * Runs the full 3-step pipeline using the signed-in admin's Supabase
+ * access token as the Bearer token for api.almostcrackd.ai — identical
+ * to how the original AL-Humor-Study-Project works, so no extra API key
+ * is needed.
+ *
+ *   1. POST /pipeline/generate-presigned-url → { presignedUrl, cdnUrl }
+ *   2. PUT  presignedUrl  (upload file to S3)
+ *   3. POST /pipeline/upload-image-from-url  → { imageId }
+ *
+ * Expects multipart/form-data with a single field: "file"
+ * isCommonUse is set to true for all admin uploads.
+ */
 export async function POST(request: Request) {
   try {
-    const token = process.env.PIPELINE_API_TOKEN
-    if (!token) {
-      return NextResponse.json(
-        { error: 'PIPELINE_API_TOKEN env var is not set' },
-        { status: 500 }
-      )
+    // ── Get the session token from cookies ───────────────────────────────
+    const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    if (!url || !key) {
+      return NextResponse.json({ error: 'Server misconfiguration' }, { status: 500 })
     }
 
-    // Parse the uploaded file from multipart form data
+    const cookieStore = cookies()
+    const supabase = createServerClient(url, key, {
+      cookies: {
+        getAll()        { return cookieStore.getAll() },
+        setAll(list) {
+          list.forEach(({ name, value, options }) =>
+            cookieStore.set(name, value, options)
+          )
+        },
+      },
+    })
+
+    const { data: { session } } = await supabase.auth.getSession()
+    if (!session?.access_token) {
+      return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+    }
+
+    const token = session.access_token
+
+    // ── Parse the uploaded file ──────────────────────────────────────────
     const formData = await request.formData()
     const file = formData.get('file')
 
@@ -44,14 +72,14 @@ export async function POST(request: Request) {
       )
     }
 
-    // ── Step 1: Get presigned S3 URL ─────────────────────────────────────────
+    // ── Step 1: Get presigned S3 URL ─────────────────────────────────────
     const presignRes = await fetch(`${API_BASE}/pipeline/generate-presigned-url`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ contentType: contentType }),
+      body: JSON.stringify({ contentType }),
     })
 
     const presignData = await presignRes.json()
@@ -70,7 +98,7 @@ export async function POST(request: Request) {
       )
     }
 
-    // ── Step 2: PUT file directly to S3 ──────────────────────────────────────
+    // ── Step 2: PUT file to S3 ───────────────────────────────────────────
     const uploadRes = await fetch(presignedUrl, {
       method: 'PUT',
       headers: { 'Content-Type': contentType },
@@ -84,8 +112,8 @@ export async function POST(request: Request) {
       )
     }
 
-    // ── Step 3: Register with the pipeline ───────────────────────────────────
-    // isCommonUse: true for admin uploads (available to all users as study images)
+    // ── Step 3: Register with the pipeline ──────────────────────────────
+    // isCommonUse: true so admin-uploaded images are available as study images
     const registerRes = await fetch(`${API_BASE}/pipeline/upload-image-from-url`, {
       method: 'POST',
       headers: {
@@ -112,6 +140,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ imageId, cdnUrl })
+
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Unknown error'
     return NextResponse.json({ error: msg }, { status: 500 })
