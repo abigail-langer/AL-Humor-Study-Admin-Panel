@@ -4,7 +4,7 @@ import { createServerClient }             from '@supabase/ssr'
 // Routes that are always public (no auth required)
 const PUBLIC_PATHS = [
   '/login',
-  '/api/auth/login',
+  '/auth/callback',   // Google OAuth redirect handler
   '/api/auth/logout',
   '/api/bootstrap',
   '/_next',
