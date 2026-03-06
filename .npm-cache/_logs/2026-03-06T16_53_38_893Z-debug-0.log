@@ -1,0 +1,623 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.6.1
+2 info using node@v24.11.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/abilanger/AL-Humor-Study-Admin-Panel/.npmrc
+5 silly config load:file:/Users/abilanger/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:/Users/abilanger/AL-Humor-Study-Admin-Panel/.npm-cache/_logs/2026-03-06T16_53_38_893Z-
+10 verbose logfile /Users/abilanger/AL-Humor-Study-Admin-Panel/.npm-cache/_logs/2026-03-06T16_53_38_893Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 http fetch GET https://registry.npmjs.org/npm attempt 1 failed with ENOTFOUND
+14 silly idealTree buildDeps
+15 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ajv' ]
+16 silly reify mark retired [
+16 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ansi-regex'
+16 silly reify ]
+17 silly reify mark retired [
+17 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ansi-styles'
+17 silly reify ]
+18 silly reify mark retired [
+18 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/any-promise'
+18 silly reify ]
+19 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/anymatch' ]
+20 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/arg' ]
+21 silly reify mark retired [
+21 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/balanced-match'
+21 silly reify ]
+22 silly reify mark retired [
+22 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/binary-extensions'
+22 silly reify ]
+23 silly reify mark retired [
+23 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/brace-expansion'
+23 silly reify ]
+24 silly reify mark retired [
+24 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/callsites'
+24 silly reify ]
+25 silly reify mark retired [
+25 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/camelcase-css'
+25 silly reify ]
+26 silly reify mark retired [
+26 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/caniuse-lite'
+26 silly reify ]
+27 silly reify mark retired [
+27 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/client-only'
+27 silly reify ]
+28 silly reify mark retired [
+28 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/color-convert'
+28 silly reify ]
+29 silly reify mark retired [
+29 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/color-name'
+29 silly reify ]
+30 silly reify mark retired [
+30 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/commander'
+30 silly reify ]
+31 silly reify mark retired [
+31 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/concat-map'
+31 silly reify ]
+32 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/cssesc' ]
+33 silly reify mark retired [
+33 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/damerau-levenshtein'
+33 silly reify ]
+34 silly reify mark retired [
+34 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/didyoumean'
+34 silly reify ]
+35 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/dlv' ]
+36 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/doctrine' ]
+37 silly reify mark retired [
+37 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/eastasianwidth'
+37 silly reify ]
+38 silly reify mark retired [
+38 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/escape-string-regexp'
+38 silly reify ]
+39 silly reify mark retired [
+39 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/eslint-config-next'
+39 silly reify ]
+40 silly reify mark retired [
+40 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/eslint-import-resolver-node'
+40 silly reify ]
+41 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/esquery' ]
+42 silly reify mark retired [
+42 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/esrecurse'
+42 silly reify ]
+43 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/esutils' ]
+44 silly reify mark retired [
+44 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/fast-levenshtein'
+44 silly reify ]
+45 silly reify mark retired [
+45 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/file-entry-cache'
+45 silly reify ]
+46 silly reify mark retired [
+46 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/fill-range'
+46 silly reify ]
+47 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/find-up' ]
+48 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/flatted' ]
+49 silly reify mark retired [
+49 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/glob-parent'
+49 silly reify ]
+50 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/has-flag' ]
+51 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/hasown' ]
+52 silly reify mark retired [
+52 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/import-fresh'
+52 silly reify ]
+53 silly reify mark retired [
+53 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/imurmurhash'
+53 silly reify ]
+54 silly reify mark retired [
+54 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-binary-path'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-bun-module'
+55 silly reify ]
+56 silly reify mark retired [
+56 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-extglob'
+56 silly reify ]
+57 silly reify mark retired [
+57 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-fullwidth-code-point'
+57 silly reify ]
+58 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-glob' ]
+59 silly reify mark retired [
+59 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-number'
+59 silly reify ]
+60 silly reify mark retired [
+60 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-path-inside'
+60 silly reify ]
+61 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/isarray' ]
+62 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/isexe' ]
+63 silly reify mark retired [
+63 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/js-tokens'
+63 silly reify ]
+64 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/js-yaml' ]
+65 silly reify mark retired [
+65 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/json-schema-traverse'
+65 silly reify ]
+66 silly reify mark retired [
+66 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/json-stable-stringify-without-jsonify'
+66 silly reify ]
+67 silly reify mark retired [
+67 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/lilconfig'
+67 silly reify ]
+68 silly reify mark retired [
+68 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/lines-and-columns'
+68 silly reify ]
+69 silly reify mark retired [
+69 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/locate-path'
+69 silly reify ]
+70 silly reify mark retired [
+70 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/lodash.merge'
+70 silly reify ]
+71 silly reify mark retired [
+71 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/loose-envify'
+71 silly reify ]
+72 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/merge2' ]
+73 silly reify mark retired [
+73 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/micromatch'
+73 silly reify ]
+74 silly reify mark retired [
+74 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/minimatch'
+74 silly reify ]
+75 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ms' ]
+76 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/mz' ]
+77 silly reify mark retired [
+77 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/natural-compare'
+77 silly reify ]
+78 silly reify mark retired [
+78 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/normalize-path'
+78 silly reify ]
+79 silly reify mark retired [
+79 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/object-assign'
+79 silly reify ]
+80 silly reify mark retired [
+80 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/object-keys'
+80 silly reify ]
+81 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/p-limit' ]
+82 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/p-locate' ]
+83 silly reify mark retired [
+83 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/parent-module'
+83 silly reify ]
+84 silly reify mark retired [
+84 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/path-exists'
+84 silly reify ]
+85 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/path-key' ]
+86 silly reify mark retired [
+86 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/path-parse'
+86 silly reify ]
+87 silly reify mark retired [
+87 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/picocolors'
+87 silly reify ]
+88 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/pify' ]
+89 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/pirates' ]
+90 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/postcss' ]
+91 silly reify mark retired [
+91 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/postcss-nested'
+91 silly reify ]
+92 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/punycode' ]
+93 silly reify mark retired [
+93 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/queue-microtask'
+93 silly reify ]
+94 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/react-is' ]
+95 silly reify mark retired [
+95 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/read-cache'
+95 silly reify ]
+96 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/readdirp' ]
+97 silly reify mark retired [
+97 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/resolve-from'
+97 silly reify ]
+98 silly reify mark retired [
+98 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/resolve-pkg-maps'
+98 silly reify ]
+99 silly reify mark retired [
+99 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/run-parallel'
+99 silly reify ]
+100 silly reify mark retired [
+100 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/set-function-name'
+100 silly reify ]
+101 silly reify mark retired [
+101 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/shebang-command'
+101 silly reify ]
+102 silly reify mark retired [
+102 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/shebang-regex'
+102 silly reify ]
+103 silly reify mark retired [
+103 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/stable-hash'
+103 silly reify ]
+104 silly reify mark retired [
+104 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/string-width'
+104 silly reify ]
+105 silly reify mark retired [
+105 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/string-width-cjs'
+105 silly reify ]
+106 silly reify mark retired [
+106 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/strip-ansi'
+106 silly reify ]
+107 silly reify mark retired [
+107 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/strip-ansi-cjs'
+107 silly reify ]
+108 silly reify mark retired [
+108 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/strip-bom'
+108 silly reify ]
+109 silly reify mark retired [
+109 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/strip-json-comments'
+109 silly reify ]
+110 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/sucrase' ]
+111 silly reify mark retired [
+111 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/supports-color'
+111 silly reify ]
+112 silly reify mark retired [
+112 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/tailwindcss'
+112 silly reify ]
+113 silly reify mark retired [
+113 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/text-table'
+113 silly reify ]
+114 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/thenify' ]
+115 silly reify mark retired [
+115 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/thenify-all'
+115 silly reify ]
+116 silly reify mark retired [
+116 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/to-regex-range'
+116 silly reify ]
+117 silly reify mark retired [
+117 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ts-interface-checker'
+117 silly reify ]
+118 silly reify mark retired [
+118 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/type-fest'
+118 silly reify ]
+119 silly reify mark retired [
+119 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/undici-types'
+119 silly reify ]
+120 silly reify mark retired [
+120 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/unrs-resolver'
+120 silly reify ]
+121 silly reify mark retired [
+121 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/util-deprecate'
+121 silly reify ]
+122 silly reify mark retired [ '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/which' ]
+123 silly reify mark retired [
+123 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/word-wrap'
+123 silly reify ]
+124 silly reify mark retired [
+124 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/wrap-ansi'
+124 silly reify ]
+125 silly reify mark retired [
+125 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/wrap-ansi-cjs'
+125 silly reify ]
+126 silly reify mark retired [
+126 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/yocto-queue'
+126 silly reify ]
+127 silly reify mark retired [
+127 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@alloc/quick-lru'
+127 silly reify ]
+128 silly reify mark retired [
+128 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@emnapi/core'
+128 silly reify ]
+129 silly reify mark retired [
+129 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@emnapi/runtime'
+129 silly reify ]
+130 silly reify mark retired [
+130 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@emnapi/wasi-threads'
+130 silly reify ]
+131 silly reify mark retired [
+131 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@eslint-community/eslint-utils'
+131 silly reify ]
+132 silly reify mark retired [
+132 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@eslint-community/regexpp'
+132 silly reify ]
+133 silly reify mark retired [
+133 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@humanwhocodes/config-array'
+133 silly reify ]
+134 silly reify mark retired [
+134 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@jridgewell/resolve-uri'
+134 silly reify ]
+135 silly reify mark retired [
+135 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@napi-rs/wasm-runtime'
+135 silly reify ]
+136 silly reify mark retired [
+136 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/env'
+136 silly reify ]
+137 silly reify mark retired [
+137 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-darwin-x64'
+137 silly reify ]
+138 silly reify mark retired [
+138 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-linux-arm64-musl'
+138 silly reify ]
+139 silly reify mark retired [
+139 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-linux-arm64-gnu'
+139 silly reify ]
+140 silly reify mark retired [
+140 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-linux-x64-musl'
+140 silly reify ]
+141 silly reify mark retired [
+141 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-win32-arm64-msvc'
+141 silly reify ]
+142 silly reify mark retired [
+142 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-win32-ia32-msvc'
+142 silly reify ]
+143 silly reify mark retired [
+143 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@nolyfill/is-core-module'
+143 silly reify ]
+144 silly reify mark retired [
+144 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@rtsao/scc'
+144 silly reify ]
+145 silly reify mark retired [
+145 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/auth-js'
+145 silly reify ]
+146 silly reify mark retired [
+146 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-win32-x64-msvc'
+146 silly reify ]
+147 silly reify mark retired [
+147 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/functions-js'
+147 silly reify ]
+148 silly reify mark retired [
+148 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/postgrest-js'
+148 silly reify ]
+149 silly reify mark retired [
+149 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/realtime-js'
+149 silly reify ]
+150 silly reify mark retired [
+150 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/ssr'
+150 silly reify ]
+151 silly reify mark retired [
+151 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/storage-js'
+151 silly reify ]
+152 silly reify mark retired [
+152 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/supabase-js'
+152 silly reify ]
+153 silly reify mark retired [
+153 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@swc/counter'
+153 silly reify ]
+154 silly reify mark retired [
+154 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@tybys/wasm-util'
+154 silly reify ]
+155 silly reify mark retired [
+155 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/json5'
+155 silly reify ]
+156 silly reify mark retired [
+156 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-linux-x64-gnu'
+156 silly reify ]
+157 silly reify mark retired [
+157 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/node'
+157 silly reify ]
+158 silly reify mark retired [
+158 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/prop-types'
+158 silly reify ]
+159 silly reify mark retired [
+159 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/react'
+159 silly reify ]
+160 silly reify mark retired [
+160 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/react-dom'
+160 silly reify ]
+161 silly reify mark retired [
+161 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@typescript-eslint/parser'
+161 silly reify ]
+162 silly reify mark retired [
+162 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@unrs/resolver-binding-linux-x64-gnu'
+162 silly reify ]
+163 silly reify mark retired [
+163 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/espree/node_modules/acorn'
+163 silly reify ]
+164 silly reify mark retired [
+164 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/eslint',
+164 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/eslint'
+164 silly reify ]
+165 silly reify mark retired [
+165 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/jiti',
+165 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/jiti'
+165 silly reify ]
+166 silly reify mark retired [
+166 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/nanoid',
+166 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/nanoid'
+166 silly reify ]
+167 silly reify mark retired [
+167 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/next',
+167 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/next'
+167 silly reify ]
+168 silly reify mark retired [
+168 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/rimraf',
+168 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/rimraf'
+168 silly reify ]
+169 silly reify mark retired [
+169 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/resolve',
+169 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/resolve'
+169 silly reify ]
+170 silly reify mark retired [
+170 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/typescript',
+170 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/tsc',
+170 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/tsserver'
+170 silly reify ]
+171 silly reify mark retired [
+171 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@nodelib/fs.walk/node_modules/fastq'
+171 silly reify ]
+172 silly reify moves {
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ajv': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.ajv-YWbUbY9s',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ansi-regex': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.ansi-regex-LZl7mhn4',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ansi-styles': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.ansi-styles-J7tsINMp',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/any-promise': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.any-promise-wpJCqIXU',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/anymatch': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.anymatch-y0eTxrnV',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/arg': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.arg-oCnmoMPx',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/balanced-match': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.balanced-match-czbMncCy',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/binary-extensions': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.binary-extensions-ICI3pXJq',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/brace-expansion': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.brace-expansion-iJTzXdAe',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/callsites': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.callsites-0BbQdEit',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/camelcase-css': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.camelcase-css-JpBySjOy',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/caniuse-lite': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.caniuse-lite-ndLq4PSt',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/client-only': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.client-only-B0pwpiXw',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/color-convert': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.color-convert-vAUeYqE2',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/color-name': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.color-name-or5zSBgE',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/commander': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.commander-UyWiIT0v',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/concat-map': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.concat-map-Y4y5uaTu',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/cssesc': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.cssesc-om06PfCA',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/damerau-levenshtein': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.damerau-levenshtein-g7kilz4r',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/didyoumean': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.didyoumean-GMZ93TSe',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/dlv': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.dlv-2JD8dEbp',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/doctrine': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.doctrine-BWbRHgPf',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/eastasianwidth': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.eastasianwidth-et9Y29hc',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/escape-string-regexp': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.escape-string-regexp-FiOjSUwB',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/eslint-config-next': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.eslint-config-next-UR91hAoz',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/eslint-import-resolver-node': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.eslint-import-resolver-node-hsMNLTsd',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/esquery': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.esquery-bvJPH6Oy',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/esrecurse': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.esrecurse-4zMffZeZ',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/esutils': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.esutils-b2bizsNG',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/fast-levenshtein': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.fast-levenshtein-CD3ZzkWn',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/file-entry-cache': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.file-entry-cache-zpObQGrD',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/fill-range': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.fill-range-YFdZIVop',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/find-up': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.find-up-oORgtA4n',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/flatted': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.flatted-2IDe0FrW',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/glob-parent': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.glob-parent-htlNpCUY',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/has-flag': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.has-flag-NfxTWsHB',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/hasown': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.hasown-IE0QY6Do',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/import-fresh': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.import-fresh-P2moYB3L',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/imurmurhash': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.imurmurhash-29VSXMGY',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-binary-path': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.is-binary-path-dsuCgJyS',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-bun-module': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.is-bun-module-sovHEHh0',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-extglob': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.is-extglob-b7P4gBbP',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-fullwidth-code-point': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.is-fullwidth-code-point-uKLxeSx0',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-glob': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.is-glob-5JTknyA1',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-number': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.is-number-fQkqaxO4',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/is-path-inside': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.is-path-inside-nWKgQsjn',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/isarray': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.isarray-gjHFGS3x',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/isexe': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.isexe-jh3WTg9b',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/js-tokens': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.js-tokens-jCgk72gx',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/js-yaml': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.js-yaml-qTvqUrq6',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/json-schema-traverse': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.json-schema-traverse-AHviJfBh',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/json-stable-stringify-without-jsonify': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.json-stable-stringify-without-jsonify-CP3ca6hd',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/lilconfig': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.lilconfig-YyyILqiU',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/lines-and-columns': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.lines-and-columns-qYDCRfni',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/locate-path': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.locate-path-p49nSPhh',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/lodash.merge': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.lodash.merge-7xXOCfas',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/loose-envify': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.loose-envify-PPpgZnTB',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/merge2': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.merge2-G4ZDRHRL',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/micromatch': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.micromatch-QGdpOv9g',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/minimatch': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.minimatch-oocncsox',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ms': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.ms-DlCspuGu',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/mz': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.mz-vERZEWxQ',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/natural-compare': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.natural-compare-D87T3ycS',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/normalize-path': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.normalize-path-LcVPeZae',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/object-assign': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.object-assign-dk21rEFu',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/object-keys': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.object-keys-6StKVA8g',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/p-limit': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.p-limit-WD7W3QKw',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/p-locate': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.p-locate-BMWxjzMM',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/parent-module': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.parent-module-GMpxnVD2',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/path-exists': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.path-exists-OeVP00pS',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/path-key': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.path-key-RhLx4qW0',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/path-parse': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.path-parse-fkPgOS4R',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/picocolors': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.picocolors-wnbxnmAd',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/pify': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.pify-bIB6YUmU',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/pirates': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.pirates-0MiMfyAt',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/postcss': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.postcss-1VFSqhAT',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/postcss-nested': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.postcss-nested-FgBcqYCq',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/punycode': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.punycode-MlfLpvAN',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/queue-microtask': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.queue-microtask-BOWCxmQz',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/react-is': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.react-is-p88iuoUx',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/read-cache': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.read-cache-EOSDmxfT',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/readdirp': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.readdirp-zI0U5cFZ',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/resolve-from': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.resolve-from-Rrnz4qPU',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/resolve-pkg-maps': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.resolve-pkg-maps-bQZNAvAb',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/run-parallel': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.run-parallel-6CGIw6Ry',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/set-function-name': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.set-function-name-PQkCmhUl',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/shebang-command': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.shebang-command-AKnEd1y3',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/shebang-regex': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.shebang-regex-SNjCsVPw',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/stable-hash': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.stable-hash-6Om4PjI3',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/string-width': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.string-width-DqCCpBWY',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/string-width-cjs': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.string-width-cjs-zaaFKgtv',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/strip-ansi': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.strip-ansi-OF81yrN3',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/strip-ansi-cjs': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.strip-ansi-cjs-oBrdUuT0',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/strip-bom': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.strip-bom-SqSb5UZZ',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/strip-json-comments': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.strip-json-comments-GpiwCPby',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/sucrase': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.sucrase-5hXlsE3n',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/supports-color': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.supports-color-O6GRPGAM',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/tailwindcss': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.tailwindcss-LQtB8ldG',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/text-table': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.text-table-wHQRYYIU',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/thenify': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.thenify-9UafgACV',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/thenify-all': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.thenify-all-b6DJ3Tgo',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/to-regex-range': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.to-regex-range-hZNsz34N',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ts-interface-checker': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.ts-interface-checker-ArGcores',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/type-fest': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.type-fest-dixLQSFF',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/undici-types': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.undici-types-rTixFbtz',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/unrs-resolver': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.unrs-resolver-uDwCe8c5',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/util-deprecate': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.util-deprecate-3L1ARJ0T',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/which': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.which-oya2Proo',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/word-wrap': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.word-wrap-nOqoUK6K',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/wrap-ansi': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.wrap-ansi-6sOgCpCe',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/wrap-ansi-cjs': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.wrap-ansi-cjs-49Z187rr',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/yocto-queue': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.yocto-queue-TP9rvkbZ',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@alloc/quick-lru': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@alloc/.quick-lru-3toUxazw',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@emnapi/core': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@emnapi/.core-8i52XnPI',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@emnapi/runtime': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@emnapi/.runtime-oicDq7oy',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@emnapi/wasi-threads': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@emnapi/.wasi-threads-QXVxL4kc',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@eslint-community/eslint-utils': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@eslint-community/.eslint-utils-tvBaPf0z',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@eslint-community/regexpp': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@eslint-community/.regexpp-X6KKbu9W',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@humanwhocodes/config-array': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@humanwhocodes/.config-array-lpYQkLFU',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@jridgewell/resolve-uri': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@jridgewell/.resolve-uri-rIzaDw4Z',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@napi-rs/wasm-runtime': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@napi-rs/.wasm-runtime-IR7KyPuQ',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/env': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/.env-Ql7SBw4j',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-darwin-x64': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/.swc-darwin-x64-12SpwASW',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-linux-arm64-musl': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/.swc-linux-arm64-musl-yhrQPt3a',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-linux-arm64-gnu': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/.swc-linux-arm64-gnu-AK9ppT4S',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-linux-x64-musl': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/.swc-linux-x64-musl-4YHgDw3g',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-win32-arm64-msvc': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/.swc-win32-arm64-msvc-tEUx8A04',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-win32-ia32-msvc': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/.swc-win32-ia32-msvc-8oPzcklx',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@nolyfill/is-core-module': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@nolyfill/.is-core-module-d4FexvDk',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@rtsao/scc': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@rtsao/.scc-zUdKLHgq',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/auth-js': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/.auth-js-GLf0ePfd',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-win32-x64-msvc': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/.swc-win32-x64-msvc-I3J5oTyn',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/functions-js': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/.functions-js-dMeHfTsQ',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/postgrest-js': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/.postgrest-js-hwNEFz1r',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/realtime-js': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/.realtime-js-CzpiQSce',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/ssr': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/.ssr-aNc5H193',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/storage-js': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/.storage-js-aV10HdDo',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/supabase-js': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@supabase/.supabase-js-jljYjKmu',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@swc/counter': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@swc/.counter-1hLOhWNa',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@tybys/wasm-util': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@tybys/.wasm-util-0h1xWrMZ',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/json5': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/.json5-6uyzBMZR',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/swc-linux-x64-gnu': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@next/.swc-linux-x64-gnu-3yb2AcVe',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/node': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/.node-AbXLptcA',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/prop-types': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/.prop-types-PMNaZr8m',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/react': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/.react-hHrN5sRz',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/react-dom': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@types/.react-dom-jeJKVzyI',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@typescript-eslint/parser': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@typescript-eslint/.parser-w23SYokJ',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@unrs/resolver-binding-linux-x64-gnu': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@unrs/.resolver-binding-linux-x64-gnu-HirYYsO6',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/espree/node_modules/acorn': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/espree/node_modules/.acorn-OyeiwzzK',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/eslint': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.eslint-OU0Wtv4R',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/eslint': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/.eslint-Pmsc41P9',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/jiti': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.jiti-ARc3wMQc',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/jiti': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/.jiti-lz15kOpy',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/nanoid': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.nanoid-ux0Tg6FF',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/nanoid': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/.nanoid-K98MZiYT',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/next': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.next-GPmlLw8w',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/next': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/.next-2jNeC4ow',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/rimraf': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.rimraf-f0vPl5Yj',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/rimraf': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/.rimraf-YPX69JnT',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/resolve': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.resolve-iX82kUh2',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/resolve': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/.resolve-9a4WySJq',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/typescript': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.typescript-6adp2zpY',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/tsc': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/.tsc-CPW3h7Fy',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/tsserver': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.bin/.tsserver-QhykZ0Mw',
+172 silly reify   '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@nodelib/fs.walk/node_modules/fastq': '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/@nodelib/fs.walk/node_modules/.fastq-BHqKLqXy'
+172 silly reify }
+173 verbose stack Error: ENOTEMPTY: directory not empty, rename '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ajv' -> '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.ajv-YWbUbY9s'
+173 verbose stack     at async Object.rename (node:internal/fs/promises:787:10)
+173 verbose stack     at async moveFile (/usr/local/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)
+173 verbose stack     at async Promise.allSettled (index 0)
+173 verbose stack     at async [reifyPackages] (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:326:11)
+173 verbose stack     at async Arborist.reify (/usr/local/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:128:5)
+173 verbose stack     at async Install.exec (/usr/local/lib/node_modules/npm/lib/commands/install.js:150:5)
+173 verbose stack     at async Npm.exec (/usr/local/lib/node_modules/npm/lib/npm.js:208:9)
+173 verbose stack     at async module.exports (/usr/local/lib/node_modules/npm/lib/cli/entry.js:67:5)
+174 error code ENOTEMPTY
+175 error syscall rename
+176 error path /Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ajv
+177 error dest /Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.ajv-YWbUbY9s
+178 error errno -66
+179 error ENOTEMPTY: directory not empty, rename '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/ajv' -> '/Users/abilanger/AL-Humor-Study-Admin-Panel/node_modules/.ajv-YWbUbY9s'
+180 silly unfinished npm timer reify 1772816019156
+181 silly unfinished npm timer reify:retireShallow 1772816019261
+182 verbose cwd /Users/abilanger/AL-Humor-Study-Admin-Panel
+183 verbose os Darwin 23.4.0
+184 verbose node v24.11.0
+185 verbose npm  v11.6.1
+186 verbose exit -66
+187 verbose code -66
+188 error A complete log of this run can be found in: /Users/abilanger/AL-Humor-Study-Admin-Panel/.npm-cache/_logs/2026-03-06T16_53_38_893Z-debug-0.log
