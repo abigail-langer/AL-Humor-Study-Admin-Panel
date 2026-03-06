@@ -8,7 +8,7 @@ type CaptionRow = {
   id: string
   content: string | null
   like_count: number | null
-  image_id: string
+  image_id: string | null
   image: {
     id: string
     url: string | null
@@ -18,7 +18,7 @@ type CaptionRow = {
 
 type CaptionLikeRow = {
   like_count: number | null
-  image_id: string
+  image_id: string | null
   image: {
     id: string
     url: string | null
@@ -34,12 +34,52 @@ type ImageLikes = {
   captionCount: number
 }
 
+function isObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null
+}
+
+function parseImage(value: unknown): CaptionRow['image'] {
+  if (!isObject(value)) return null
+
+  const id = typeof value.id === 'string' ? value.id : ''
+  const url = typeof value.url === 'string' ? value.url : null
+  const imageDescription = typeof value.image_description === 'string' ? value.image_description : null
+
+  return { id, url, image_description: imageDescription }
+}
+
+function parseTopCaption(value: unknown): CaptionRow | null {
+  if (!isObject(value)) return null
+
+  return {
+    id: typeof value.id === 'string' ? value.id : '',
+    content: typeof value.content === 'string' ? value.content : null,
+    like_count: typeof value.like_count === 'number' ? value.like_count : 0,
+    image_id: typeof value.image_id === 'string' ? value.image_id : null,
+    image: parseImage(value.image),
+  }
+}
+
+function parseCaptionLikes(value: unknown): CaptionLikeRow[] {
+  if (!Array.isArray(value)) return []
+
+  return value
+    .filter(isObject)
+    .map((row) => ({
+      like_count: typeof row.like_count === 'number' ? row.like_count : 0,
+      image_id: typeof row.image_id === 'string' ? row.image_id : null,
+      image: parseImage(row.image),
+    }))
+}
+
 function getTopImage(captions: CaptionLikeRow[]): ImageLikes | null {
   if (captions.length === 0) return null
 
   const byImage = new Map<string, ImageLikes>()
 
   for (const caption of captions) {
+    if (!caption.image_id) continue
+
     const likes = caption.like_count ?? 0
     const current = byImage.get(caption.image_id)
 
@@ -109,8 +149,8 @@ export default async function LandingPage() {
   const captionsCount = captionsCountResult.count ?? 0
   const usersCount = usersResult.count ?? 0
 
-  const topCaption = topCaptionResult.data as CaptionRow | null
-  const topImage = getTopImage((captionLikesResult.data as CaptionLikeRow[] | null) ?? [])
+  const topCaption = parseTopCaption(topCaptionResult.data)
+  const topImage = getTopImage(parseCaptionLikes(captionLikesResult.data))
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-8 space-y-8">
