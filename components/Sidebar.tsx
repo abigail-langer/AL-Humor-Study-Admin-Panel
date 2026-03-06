@@ -8,6 +8,16 @@ import { createSupabaseBrowserClient } from '@/lib/supabase-browser'
 const NAV = [
   {
     href: '/',
+    label: 'Dashboard',
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M3 13h8V3H3v10zm10 8h8V11h-8v10zM3 21h8v-6H3v6zm10-10h8V3h-8v8z" />
+      </svg>
+    ),
+  },
+  {
+    href: '/users',
     label: 'Users',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
