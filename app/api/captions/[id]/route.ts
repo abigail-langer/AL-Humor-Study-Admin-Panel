@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // GET /api/captions/[id]
 export async function GET(
@@ -33,6 +34,9 @@ export async function PATCH(
   { params }: { params: { id: string } }
 ) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const body = await request.json()
     const allowed = ['content', 'is_public', 'is_featured']
     const updates: Record<string, unknown> = {}
@@ -45,6 +49,7 @@ export async function PATCH(
     }
 
     updates.modified_datetime_utc = new Date().toISOString()
+    updates.modified_by_user_id = user.id
 
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase
