@@ -17,7 +17,7 @@ export async function GET(request: Request) {
       .from('llm_model_responses')
       .select(`
         *,
-        profile:profiles(id, first_name, last_name, email),
+        profile:profiles!profile_id(id, first_name, last_name, email),
         llm_model:llm_models(id, name, provider_model_id),
         humor_flavor:humor_flavors(id, slug)
       `, { count: 'exact' })

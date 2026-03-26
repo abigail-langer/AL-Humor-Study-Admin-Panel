@@ -14,7 +14,7 @@ export async function GET(
       .select(`
         *,
         image:images ( id, url ),
-        profile:profiles ( id, first_name, last_name, email )
+        profile:profiles!profile_id ( id, first_name, last_name, email )
       `)
       .eq('id', params.id)
       .single()

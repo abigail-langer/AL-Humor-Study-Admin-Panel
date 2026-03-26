@@ -17,7 +17,7 @@ export async function GET(request: Request) {
         *,
         caption_request:caption_requests(
           id,
-          profile:profiles(id, first_name, last_name, email),
+          profile:profiles!profile_id(id, first_name, last_name, email),
           image:images(id, url)
         )
       `, { count: 'exact' })

@@ -20,7 +20,7 @@ export async function GET(request: Request) {
       .select(`
         *,
         image:images ( id, url ),
-        profile:profiles ( id, first_name, last_name, email )
+        profile:profiles!profile_id ( id, first_name, last_name, email )
       `, { count: 'exact' })
 
     if (search) {
