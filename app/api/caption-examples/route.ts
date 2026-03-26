@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // GET /api/caption-examples?page=1&limit=30&search=
 export async function GET(request: Request) {
@@ -34,6 +35,9 @@ export async function GET(request: Request) {
 // POST /api/caption-examples
 export async function POST(request: Request) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const body = await request.json()
     const { image_description, caption, explanation, priority = 0, image_id = null } = body
     if (!image_description) return NextResponse.json({ error: 'image_description is required' }, { status: 400 })
@@ -43,7 +47,7 @@ export async function POST(request: Request) {
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase
       .from('caption_examples')
-      .insert({ image_description, caption, explanation, priority, image_id })
+      .insert({ image_description, caption, explanation, priority, image_id, created_by_user_id: user.id, modified_by_user_id: user.id })
       .select()
       .single()
 

@@ -1,16 +1,20 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // PATCH /api/llm-providers/[id]
 export async function PATCH(request: Request, { params }: { params: { id: string } }) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const { name } = await request.json()
     if (!name) return NextResponse.json({ error: 'name is required' }, { status: 400 })
 
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase
       .from('llm_providers')
-      .update({ name })
+      .update({ name, modified_by_user_id: user.id })
       .eq('id', params.id)
       .select()
       .single()

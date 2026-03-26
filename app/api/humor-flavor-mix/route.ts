@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // GET /api/humor-flavor-mix
 export async function GET() {
@@ -21,6 +22,9 @@ export async function GET() {
 // PATCH /api/humor-flavor-mix  body: { id, caption_count }
 export async function PATCH(request: Request) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const body = await request.json()
     const { id, caption_count } = body
     if (!id) return NextResponse.json({ error: 'id is required' }, { status: 400 })
@@ -31,7 +35,7 @@ export async function PATCH(request: Request) {
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase
       .from('humor_flavor_mix')
-      .update({ caption_count })
+      .update({ caption_count, modified_by_user_id: user.id })
       .eq('id', id)
       .select(`*, humor_flavor:humor_flavors(id, slug, description)`)
       .single()

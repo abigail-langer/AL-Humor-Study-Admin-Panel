@@ -1,9 +1,13 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // PATCH /api/llm-models/[id]
 export async function PATCH(request: Request, { params }: { params: { id: string } }) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const body = await request.json()
     const allowed = ['name', 'llm_provider_id', 'provider_model_id', 'is_temperature_supported']
     const updates: Record<string, unknown> = {}
@@ -13,6 +17,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
     if (Object.keys(updates).length === 0) {
       return NextResponse.json({ error: 'No updatable fields provided' }, { status: 400 })
     }
+    updates.modified_by_user_id = user.id
 
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase

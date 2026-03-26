@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // GET /api/terms?page=1&limit=30&search=
 export async function GET(request: Request) {
@@ -34,6 +35,9 @@ export async function GET(request: Request) {
 // POST /api/terms  body: { term, definition, example, priority?, term_type_id? }
 export async function POST(request: Request) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const body = await request.json()
     const { term, definition, example, priority = 0, term_type_id = null } = body
     if (!term)       return NextResponse.json({ error: 'term is required' },       { status: 400 })
@@ -43,7 +47,7 @@ export async function POST(request: Request) {
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase
       .from('terms')
-      .insert({ term, definition, example, priority, term_type_id })
+      .insert({ term, definition, example, priority, term_type_id, created_by_user_id: user.id, modified_by_user_id: user.id })
       .select()
       .single()
 

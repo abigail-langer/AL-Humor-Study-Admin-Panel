@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // GET /api/whitelist-emails?search=
 export async function GET(request: Request) {
@@ -29,13 +30,16 @@ export async function GET(request: Request) {
 // POST /api/whitelist-emails  body: { email_address }
 export async function POST(request: Request) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const { email_address } = await request.json()
     if (!email_address) return NextResponse.json({ error: 'email_address is required' }, { status: 400 })
 
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase
       .from('whitelist_email_addresses')
-      .insert({ email_address: email_address.toLowerCase().trim() })
+      .insert({ email_address: email_address.toLowerCase().trim(), created_by_user_id: user.id, modified_by_user_id: user.id })
       .select()
       .single()
 

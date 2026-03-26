@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // GET /api/llm-models
 export async function GET() {
@@ -21,6 +22,9 @@ export async function GET() {
 // POST /api/llm-models
 export async function POST(request: Request) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const body = await request.json()
     const { name, llm_provider_id, provider_model_id, is_temperature_supported = false } = body
     if (!name)              return NextResponse.json({ error: 'name is required' },              { status: 400 })
@@ -30,7 +34,7 @@ export async function POST(request: Request) {
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase
       .from('llm_models')
-      .insert({ name, llm_provider_id, provider_model_id, is_temperature_supported })
+      .insert({ name, llm_provider_id, provider_model_id, is_temperature_supported, created_by_user_id: user.id, modified_by_user_id: user.id })
       .select(`*, provider:llm_providers(id, name)`)
       .single()
 

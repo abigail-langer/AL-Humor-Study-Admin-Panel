@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // GET /api/allowed-signup-domains
 export async function GET() {
@@ -21,13 +22,16 @@ export async function GET() {
 // POST /api/allowed-signup-domains  body: { apex_domain }
 export async function POST(request: Request) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const { apex_domain } = await request.json()
     if (!apex_domain) return NextResponse.json({ error: 'apex_domain is required' }, { status: 400 })
 
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase
       .from('allowed_signup_domains')
-      .insert({ apex_domain: apex_domain.toLowerCase().trim() })
+      .insert({ apex_domain: apex_domain.toLowerCase().trim(), created_by_user_id: user.id, modified_by_user_id: user.id })
       .select()
       .single()
 
