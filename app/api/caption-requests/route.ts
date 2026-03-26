@@ -15,7 +15,7 @@ export async function GET(request: Request) {
       .from('caption_requests')
       .select(`
         *,
-        profile:profiles(id, first_name, last_name, email),
+        profile:profiles!profile_id(id, first_name, last_name, email),
         image:images(id, url, image_description)
       `, { count: 'exact' })
       .order('created_datetime_utc', { ascending: false })

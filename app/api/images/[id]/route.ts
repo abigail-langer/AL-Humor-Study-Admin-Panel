@@ -12,7 +12,7 @@ export async function GET(
 
     const { data: image, error: imgErr } = await supabase
       .from('images')
-      .select(`*, profile:profiles ( id, first_name, last_name, email )`)
+      .select(`*, profile:profiles!profile_id ( id, first_name, last_name, email )`)
       .eq('id', params.id)
       .single()
 
