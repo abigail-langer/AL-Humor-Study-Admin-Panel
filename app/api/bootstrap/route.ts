@@ -65,6 +65,7 @@ export async function POST(request: Request) {
       .update({
         is_superadmin: true,
         modified_datetime_utc: new Date().toISOString(),
+        modified_by_user_id: user_id,
       })
       .eq('id', user_id)
 
