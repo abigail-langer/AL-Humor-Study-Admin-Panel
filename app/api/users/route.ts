@@ -83,6 +83,9 @@ export async function PATCH(request: Request) {
 // Deletes from auth.users (cascades to profiles via FK)
 export async function DELETE(request: Request) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const { id } = await request.json()
     if (!id || typeof id !== 'string') {
       return NextResponse.json({ error: 'id is required' }, { status: 400 })

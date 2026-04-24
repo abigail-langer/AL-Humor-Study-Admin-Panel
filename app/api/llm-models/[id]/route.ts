@@ -17,6 +17,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
     if (Object.keys(updates).length === 0) {
       return NextResponse.json({ error: 'No updatable fields provided' }, { status: 400 })
     }
+    updates.modified_datetime_utc = new Date().toISOString()
     updates.modified_by_user_id = user.id
 
     const supabase = getSupabaseAdmin()
@@ -38,6 +39,9 @@ export async function PATCH(request: Request, { params }: { params: { id: string
 // DELETE /api/llm-models/[id]
 export async function DELETE(_request: Request, { params }: { params: { id: string } }) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const supabase = getSupabaseAdmin()
     const { error } = await supabase.from('llm_models').delete().eq('id', params.id)
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })

@@ -14,7 +14,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
     const supabase = getSupabaseAdmin()
     const { data, error } = await supabase
       .from('llm_providers')
-      .update({ name, modified_by_user_id: user.id })
+      .update({ name, modified_datetime_utc: new Date().toISOString(), modified_by_user_id: user.id })
       .eq('id', params.id)
       .select()
       .single()
@@ -30,6 +30,9 @@ export async function PATCH(request: Request, { params }: { params: { id: string
 // DELETE /api/llm-providers/[id]
 export async function DELETE(_request: Request, { params }: { params: { id: string } }) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const supabase = getSupabaseAdmin()
     const { error } = await supabase.from('llm_providers').delete().eq('id', params.id)
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })
