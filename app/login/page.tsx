@@ -7,6 +7,7 @@ import { Suspense } from 'react'
 function LoginForm() {
   const searchParams = useSearchParams()
   const error        = searchParams.get('error')
+  const next         = searchParams.get('next') ?? '/'
 
   const errorMessage =
     error === 'not_superadmin'
@@ -17,9 +18,10 @@ function LoginForm() {
 
   const handleGoogleSignIn = async () => {
     const supabase = createSupabaseBrowserClient()
+    const callbackUrl = `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`
     await supabase.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${window.location.origin}/auth/callback` },
+      options: { redirectTo: callbackUrl },
     })
   }
 

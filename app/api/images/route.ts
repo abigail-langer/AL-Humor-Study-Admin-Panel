@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { createSupabaseServerClient } from '@/lib/supabase-server'
 
 // GET /api/images?page=1&limit=20&search=&filter=all|common|public
 export async function GET(request: Request) {
@@ -49,6 +50,9 @@ export async function GET(request: Request) {
 // Deletes the image row — cascades to captions via FK
 export async function DELETE(request: Request) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const { id } = await request.json()
     if (!id || typeof id !== 'string') {
       return NextResponse.json({ error: 'id is required' }, { status: 400 })

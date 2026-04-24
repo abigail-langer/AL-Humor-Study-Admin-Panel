@@ -30,6 +30,9 @@ export async function PATCH(request: Request, { params }: { params: { id: string
 // DELETE /api/whitelist-emails/[id]
 export async function DELETE(_request: Request, { params }: { params: { id: string } }) {
   try {
+    const { data: { user } } = await createSupabaseServerClient().auth.getUser()
+    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+
     const supabase = getSupabaseAdmin()
     const { error } = await supabase.from('whitelist_email_addresses').delete().eq('id', params.id)
     if (error) return NextResponse.json({ error: error.message }, { status: 500 })
